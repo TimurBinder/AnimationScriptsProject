@@ -8,6 +8,7 @@ public class MoveForward : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(_speed * Time.deltaTime, 0, 0);
+        float offset = _speed * Time.deltaTime;
+        transform.Translate(offset, 0, 0);
     }
 }
