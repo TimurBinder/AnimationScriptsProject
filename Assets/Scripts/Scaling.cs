@@ -9,6 +9,9 @@ public class Scaling : MonoBehaviour
     private void Update()
     {
         float offset = _speed * Time.deltaTime;
-        transform.localScale = new Vector3(transform.localScale.x + offset, transform.localScale.y + offset, transform.localScale.z + offset);
+        float newScaleX = transform.localScale.x + offset;
+        float newScaleY = transform.localScale.y + offset;
+        float newScaleZ = transform.localScale.z + offset;
+        transform.localScale = new Vector3(newScaleX, newScaleY, newScaleZ);
     }
 }
